@@ -1,0 +1,675 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  overflow-x:hidden;
+}
+
+
+/* ----- top arrow styling ----- */
+.top-arrow {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width:40px;
+  height: 40px;
+  background: #ff8c00;
+  color: white;
+  padding:7px;
+  text-align:center;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: block; 
+  z-index: 1000; 
+}
+
+.top-arrow a {
+  color: white;
+}
+
+
+
+
+header{
+  background: #111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*  ---- HEADER STYLING -------- */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 25px;
+}
+
+.logo h1 span {
+  color: #ff8c00;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav a {
+  color: white;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+.Login {
+  background: orange;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.Login:hover {
+  background: #ff8c00;
+}
+
+/*  ----- END OF HEADER STYLING ----- */
+
+/* ----- HERO SECTION ------ */
+
+.intro-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  gap: 40px;
+}
+
+.intro {
+  width: 100%;
+}
+
+.intro-info h3 {
+  color: orange;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.intro-info h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 1200;
+  color: orange;
+}
+
+.intro-info h1 span {
+  color: white;
+}
+
+.intro-info p {
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #ece5e5;
+}
+
+.hire-me {
+  background: orange;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 18px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hire-me:hover {
+  background: #ff8c00;
+  transform: translateY(-2px);
+}
+
+.intro-info img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  display: block;
+  margin-left: auto; /* pushes image to the right */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/*  ------- END OF HERO STYLING ------ */
+
+/*  ----- ABOUT STYLING ------ */
+
+.about {
+  padding: 80px 0;
+  color: #fff;
+  background: #222;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  gap: 30px;
+}
+
+.about-info h2 {
+  font-size: 75px;
+}
+
+.about-info h2::after {
+  content: "";
+  width: 60px;
+  height: 6px;
+  background: #ff8c00;
+  display: block;
+  border-radius: 5px;
+}
+
+.about-info p {
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.about-info a {
+  background: #ff8c00;
+  padding: 12px 30px;
+  border-radius: 20px;
+  margin-top: 25px;
+  display: inline-block;
+  color: white;
+}
+
+.about-info a:hover {
+  background: orange;
+  transform: translateY(-2px);
+}
+
+.about-info img {
+  border-radius: 15px;
+  filter: grayscale(1);
+}
+
+.about-info img:hover {
+  filter: grayscale(0);
+}
+
+/*  ------- END OF ABOUT STYLING -------- */
+
+/* --------SERVICES STYLING----------- */
+
+.services {
+  color: white;
+  padding: 70px 0;
+}
+
+.services-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-title h1 {
+  font-size: 56px;
+}
+
+.services-title span {
+  color: orange;
+}
+.services-title h3 {
+  font-size: 28px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.services-info {
+  width: 100%;
+}
+
+.card-info {
+  background: #222;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  min-height: 300px;
+  border-radius: 20px;
+  gap: 20px;
+  transition: 0.3s ease-in-out;
+}
+.card-info i {
+  font-size: 60px;
+  margin: 20px 0;
+}
+.card-info h3 {
+  color: orange;
+}
+.card-info p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+.card-info:hover h3 {
+  color: white;
+}
+.card-info:hover {
+  background: orange;
+  cursor: pointer;
+}
+/*----------END OF SERVICES STYLING-------- */
+
+
+
+
+/* ------VIDEOS AND AUDIO STYLING------ */
+
+.videos{
+  color: white;
+  padding:80px 0;
+}
+
+.video-title{
+  text-align: center;
+  margin-bottom:80px;
+}
+
+
+.video-title h1{
+  font-size: 50px;
+}
+.video-title h3 span{
+  color: orange;
+}
+
+
+.videos-container{
+  display:grid;
+  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  margin-top:38px;
+  align-items: center;
+}
+
+.video-info .video{
+  width: 100%;
+ 
+}
+.video-info{
+  color: white;
+  line-height: 1.6;
+}
+
+.video-info audio{
+  width: 100%;
+  margin-top:20px;
+}
+
+
+/* ----- END OF VIDEOS AND AUDIO STYLING ----- */
+
+
+
+
+
+/* ---------RESUME STYLING---------- */
+.resume {
+  background: #222;
+  padding: 80px 0;
+  color: white;
+  line-height: 1.3;
+}
+
+.resume-head h1 {
+  color: orange;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+.resume-head h1 span{
+  color: white;
+}
+.resume-head p {
+  text-align: center;
+  font-size: 22px;
+}
+.resume-info {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.section-label {
+  font-size: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 50px;
+  border-bottom: 1px solid orange;
+  margin-top: 50px;
+}
+.resume-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.resume-table tr {
+  border-bottom: 1px solid orange;
+}
+.resume-table tr:last-child {
+  border-bottom: none;
+}
+.resume-table td {
+  padding: 10px 20px;
+  font-size: 20px;  
+}
+.col-main{
+  font-weight:bold;
+}
+.col-sub{
+  font-size:15px;
+  line-height:1.3;
+  margin-top:12px;
+}
+/* -------END OF RESUME STYLING-------------- */
+/* -------SKILLS STYLING--------- */
+
+.skills{
+  color: white;
+  padding:80px 0;
+  gap:40px;
+
+}
+.skills-title{
+  text-align: center;
+  font-size:20px;
+}
+.skills-title span{
+  color: orange;
+}
+.skills-title p{
+  font-weight: 600;
+}
+.skills-container{
+  display:grid;
+  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  margin-top:38px;
+}
+.progress-container{
+    width:80%;
+    height:10px;
+    background:#222;
+    border-radius:10px;
+    overflow: hidden;
+}
+.progress-bar{
+   width:80%;
+    height:10px;
+    background:orange;
+    border-radius:10px;
+}
+/* --------END OS SKILLS STYLING------- */
+/*--------CONTACT STYLING------ */
+.contact{
+  color: white;
+  background: #222;
+  padding:80px 0;
+}
+.contact-title h1{
+  font-size:50px;
+  text-align: center;
+}
+.contact-title h1 span{
+  color: orange;
+}
+.contact-title p{
+  text-align: center;
+  font-size:17px;
+  margin:15px auto;
+  max-width:600px;
+}
+.form-container{
+  display:grid;
+  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  margin-top:38px;
+  place-items: center;
+}
+.form-info h1{
+  font-size:50px;
+}
+.form-info p{
+  line-height:1.6;
+  margin-top:15px;
+}
+
+
+
+form{
+  width:100%;
+  height:550px;
+  max-width:400px;
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  color:#000;
+}
+
+form .logo img{
+  width:80px;
+  display:block;
+  margin:0 auto 20px;
+}
+.form-title h1{
+  font-size:30px;
+  text-align: center;
+}
+.form-title p{
+  font-size:15px;
+  text-align: center;
+}
+
+form div{
+  margin-top:20px;
+}
+form label{
+  display:block;
+  margin-bottom:5px;
+  font-weight:600;
+}
+form input{
+  width:100%;
+  padding:10px;
+  border-radius:20px;
+  border:1px solid #ccc;
+}
+.btn{
+  background: orange;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  border:none;
+  margin-top:15px;
+  width:100%;
+}
+.btn:hover{
+  background: #ff8c00;
+  transform: translateY(-2px);
+}
+form p{
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.form-info .details{
+  text-align: center;
+  font-size: 17px;
+  margin-top: 15px;
+}
+
+.form-info .account{
+  text-align: center;
+
+}
+
+
+.form-info a{
+  color: orange;
+  transition: 0.3s;
+  text-align:center;
+}
+.form-info a:hover{
+  color: #ff8c00;
+}
+/* -----END OF CONTACT STYLING----- */
+  
+
+/* -------- FOOTER -------- */
+
+.footer {
+  background: #03073d;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+.footer h2{
+  font-size:40px;  
+}
+
+.footer h2 span {
+  color: orange;
+}
+
+.footer-about p {
+  margin-top: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: orange;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: orange;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+/*-------END OF FOOTER STYLING-------- */
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE STYLING */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background: #111;
+    transition: 0.3s;
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  nav li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  nav.active {
+    left: 0;
+  }
+
+  .Login {
+    display: none; /* optional: hide login on mobile */
+  }
+}
