@@ -638,38 +638,204 @@ form p{
   cursor: pointer;
 }
 
-/* MOBILE STYLING */
+
+/* --------- RESPONSIVENESS ------ */
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+/* --------- RESPONSIVENESS ------ */
+
+/* --- Tablet and below (max 992px) --- */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .intro-info h1 {
+    font-size: 38px;
+  }
+
+  .about-info h2 {
+    font-size: 50px;
+  }
+
+  .services-title h1 {
+    font-size: 40px;
+  }
+
+  .resume-head h1 {
+    font-size: 38px;
+  }
+
+  .contact-title h1 {
+    font-size: 38px;
+  }
+
+  .footer h2 {
+    font-size: 30px;
+  }
+}
+
+/* --- Mobile (max 768px) --- */
 @media (max-width: 768px) {
 
+  /* Show hamburger, hide nav and login by default */
   .menu-toggle {
     display: block;
   }
 
   nav {
-    position: absolute;
-    top: 70px;
-    left: -100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     width: 100%;
     background: #111;
-    transition: 0.3s;
+    padding: 20px 0;
   }
 
-  nav ul {
-    display: block;
-    text-align: center;
-    padding: 20px 0;
+  nav.active {
+    display: flex;
   }
 
   nav li {
     display: block;
-    margin: 15px 0;
-  }
-
-  nav.active {
-    left: 0;
+    text-align: center;
+    margin: 0;
   }
 
   .Login {
-    display: none; /* optional: hide login on mobile */
+    display: none;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  /* Hero section */
+  .intro-container {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .intro-info h1 {
+    font-size: 32px;
+  }
+
+  .intro-info img {
+    margin: 0 auto;
+  }
+
+  /* About section */
+  .about-info h2 {
+    font-size: 40px;
+  }
+
+  .about-container {
+    text-align: center;
+  }
+
+  .about-info h2::after {
+    margin: 0 auto;
+  }
+
+  /* Services */
+  .services-title h1 {
+    font-size: 36px;
+  }
+
+  /* Resume */
+  .resume-head h1 {
+    font-size: 32px;
+  }
+
+  .resume-head p {
+    font-size: 16px;
+  }
+
+  .section-label {
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+  }
+
+  .resume-table td {
+    font-size: 14px;
+    padding: 8px 10px;
+    display: block;
+    width: 100%;
+  }
+
+  /* Skills */
+  .progress-container {
+    width: 100%;
+  }
+
+  /* Contact form */
+  form {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .contact-title h1 {
+    font-size: 36px;
+  }
+
+  /* Videos */
+  .video-title h1 {
+    font-size: 36px;
+  }
+
+  /* Footer */
+  .footer h2 {
+    font-size: 28px;
+  }
+
+  .footer-container {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    display: flex;
+  }
+
+  /* Top arrow */
+  .top-arrow {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* --- Small phones (max 480px) --- */
+@media (max-width: 480px) {
+
+  .intro-info h1 {
+    font-size: 26px;
+  }
+
+  .about-info h2 {
+    font-size: 32px;
+  }
+
+  .services-title h1,
+  .video-title h1,
+  .contact-title h1,
+  .resume-head h1 {
+    font-size: 28px;
+  }
+
+  .card-info {
+    min-height: auto;
+  }
+
+  .resume-table td {
+    font-size: 13px;
   }
 }
