@@ -1,7 +1,10 @@
- const menuToggle = document.getElementById('menu-toggle');
-  const nav = document.querySelector('nav');
+//  const menuToggle = document.getElementById('menu-toggle');
+//   const nav = document.querySelector('nav');
 
-  menuToggle.addEventListener('click', function () {
-    nav.classList.toggle('active');
+//   menuToggle.addEventListener('click', function () {
+//     nav.classList.toggle('active');
     
-  });
+//   });
+
+
+
