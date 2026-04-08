@@ -413,44 +413,95 @@ nav a:hover {
   margin-top:12px;
 }
 /* -------END OF RESUME STYLING-------------- */
+
+
+
+
+
+
 /* -------SKILLS STYLING--------- */
 
-.skills{
+.skills {
   color: white;
-  padding:80px 0;
-  gap:40px;
+  padding: 80px 0;
+}
 
-}
-.skills-title{
+.skills-title {
   text-align: center;
-  font-size:20px;
+  font-size: 20px;
 }
-.skills-title span{
+
+.skills-title h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.skills-title span {
   color: orange;
 }
-.skills-title p{
+
+.skills-title p {
   font-weight: 600;
+  color: #ccc;
+  max-width: 500px;
+  margin: 0 auto;
 }
-.skills-container{
-  display:grid;
-  gap:40px;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  margin-top:38px;
+
+.skills-container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.progress-container{
-    width:80%;
-    height:10px;
-    background:#222;
-    border-radius:10px;
-    overflow: hidden;
+
+.skill-item {
+  margin-bottom: 25px;
 }
-.progress-bar{
-   width:80%;
-    height:10px;
-    background:orange;
-    border-radius:10px;
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-label h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.skill-label span {
+  font-size: 14px;
+  color: orange;
+  font-weight: 700;
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 10px;
+  background: orange;
+  border-radius: 10px;
+  transition: width 0.6s ease-in-out;
 }
 /* --------END OS SKILLS STYLING------- */
+
+
+
+
+
+
+
 /*--------CONTACT STYLING------ */
 .contact{
   color: white;
