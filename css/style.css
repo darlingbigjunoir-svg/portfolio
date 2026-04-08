@@ -725,6 +725,10 @@ form p{
     font-size: 50px;
   }
 
+   .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .services-title h1 {
     font-size: 40px;
   }
@@ -806,6 +810,12 @@ form p{
   }
 
   /* Services */
+   .services-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
   .services-title h1 {
     font-size: 36px;
   }
@@ -882,6 +892,10 @@ form p{
 
   .about-info h2 {
     font-size: 32px;
+  }
+
+  .services-container {
+    max-width: 100%;
   }
 
   .services-title h1,
