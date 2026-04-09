@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="login-container">
+      <img src="Images/Logo.png" alt="Logo" />
+      <h2>Welcome Back!!</h2>
+      <p>Please enter your credentials to log in.</p>
+
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+
+      <a href="index.html" class="back-home">Back to Home</a>
+    </div>
+
+     <style>
+    
+    .login-container {
+      background: #fff;
+      padding:30px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      overflow-x: hidden;
+     
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f0f0;
+      margin: 0;
+    }
+
+    .login-container img {
+      width: 80px;
+      margin-bottom: 15px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .login-container h2 {
+      margin-bottom: 0 0 8px;
+    }
+
+    .login-container p {
+      font-size: 14px;
+      margin:0 0 16px;
+      color: #555;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .login-container button {
+      width: 100%;
+      margin-top: 20px;
+      padding:10px 20px;
+      border-radius: 20px;
+        border: none;
+        background:orange;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .back-home {
+      
+      display: block;
+      color: orange;
+    }
+  </style>
+  </body>
+</html>
