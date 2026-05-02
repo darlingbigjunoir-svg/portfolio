@@ -1,445 +1,532 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Portfolio - Kaku Awuah</title>
-
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Portfolio — Kaku Awuah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="short-cut icon" type="image/x-icon" href="Images/favicon.png"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.png" />
   </head>
+  <body id="top">
+    <a href="#top" class="top-arrow" aria-label="Back to top"
+      ><i class="fa-solid fa-arrow-up" aria-hidden="true"></i
+    ></a>
 
-  <body>
-    <!--  ------ HEADER ------- -->
-
-    <div class="top-arrow" >
-      <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
-    </div>
-    <header>
-      <div class="container">
-        <div class="navbar">
-          <div class="logo">
-            <h1>Kaku<span>.</span></h1>
-          </div>
-          <div class="menu-toggle" id="menu-toggle">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-
-          <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#resume">Resume</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#videos">Videos</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-
-          <a href="login.html" class="Login">Login</a>
-        </div>
-
-        <div class="intro-container">
-          <div class="intro-info">
-            <h3>Hello!</h3>
-            <h1><span>Hi,</span> I am Kaku Awuah</h1>
-            <p>
-              A Freelancer in Takoradi with strong design skills and a passion
-              for creating clean, modern user experiences.
-            </p>
-            <button class="hire-me">Hire Me</button>
-          </div>
-
-          <div class="intro-info">
-            <img src="Images/Kaku.png" alt="Kaku Image" />
-          </div>
-        </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand" aria-label="Kaku Awuah home">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span class="brand-text">Kaku</span>
+        </a>
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li class="nav-contact-mobile"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#contact" class="btn btn-primary btn-nav">Contact</a>
       </div>
     </header>
 
-    <!--  ----- END OF HEADER ------  -->
-
     <main>
-      <!--  ABOUT SECTION ----- -->
-      <section class="about" id="about">
-        <div class="container">
-          <div class="about-container">
-            <div class="about-info">
-              <h2>About Me</h2>
-              <p>
-               My name is Kaku Awuah, a passionate UI/UX designer and web developer focused on building clean and modern digital experiences. With a strong background in design and development, I specialize in creating user-friendly interfaces and visually appealing websites that effectively communicate the brand's message. I am dedicated to delivering high-quality work that exceeds client expectations and provides an exceptional user experience.I have the skills and expertise to bring your ideas to life and create a stunning online presence for your business or personal brand.i have a strong background in design and development, I specialize in creating user-friendly interfaces and visually appealing websites that effectively communicate the brand's message. I am dedicated to delivering high-quality work that exceeds client expectations and provides an exceptional user experience.To check out my CV, click the button below.
-              </p>
-              <a href="../Images/resume.docx" download class="download"
-                >Download Cv</a
-              >
-            </div>
-            <div class="about-info">
-              <img src="Images/Kaku 1.jpg" alt="Picture of me" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- END OF ABOUT SECTION -->
-
-      <!-------Services section--------------->
-     <section class="services" id="services">
-  <div class="container">
-    <div class="services-title">
-      <h3><span>My</span> services.</h3>
-      <h1>What I Do</h1>
-    </div>
-
-    <div class="services-container">
-      <div class="services-info">
-        <div class="card-info">
-          <i class="fa-solid fa-computer"></i>
-          <h3>UI/UX Designer</h3>
-          <p>
-            I specialize in creating user-friendly interfaces and visually appealing websites that effectively communicate the brand's message. I am dedicated to delivering high-quality work that exceeds client expectations and provides an exceptional user experience.
-          </p>
-        </div>
-      </div>
-
-      <div class="services-info">
-        <div class="card-info">
-          <i class="fa-solid fa-paintbrush"></i>
-          <h3>Graphic Designer</h3>
-          <p>
-            I create visually appealing graphics and designs that effectively communicate the brand's message and enhance the overall aesthetic of digital and print materials.
-          </p>
-        </div>
-      </div>
-
-      <div class="services-info">
-        <div class="card-info">
-          <i class="fa-solid fa-globe"></i>
-          <h3>Website Designer</h3>
-          <p>
-            I create responsive and user-friendly websites that provide an excellent user experience and effectively communicate the brand's message.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-      <!-------END OF SERVICES SECTION------------>
-
-
-<!--  VIDEOS AND AUDIO SECTION ----- -->
-
-<section  class="videos" id="videos" >
-  <div class="container">
-    <div class="video-title">
-      <h3><span>My</span> Videos.</h3>
-      <h1>Videos and Audio</h1>
-    </div>
-
-    <div class="videos-container">
-
-        <div class="video-info">
-         <h1>My Videos</h1>
-         <p>These are some of my latest video projects.You can view them below.If you like what you see, feel free to contact me! I am a passionate UI/UX designer and web developer focused on building clean and modern digital experiences and I love creating innovative solutions that make a difference.</p>
-
-         <audio src="audio/Country.mp3" controls></audio>
-      </div>
-     
-
-      <div class="video-info">
-        <video src="videos/olivia.mp4" controls class="video"></video>
-       
-      </div>
-
-      
-    </div>
-  </div>
-
-</section>
-
-
-<!-- END OF VIDEOS AND AUDIO SECTION -->
-
-
-
-
-
-      <!------RESUME SECTION---------->
-      <section class="resume" id="resume">
-        <div class="container">
-          <div class="resume-head">
-            <h1>Kaku Awuah<span>.</span></h1>
-            <p class="resume-title">Website Developer and UI/UX Designer</p>
-          </div>
-          <div class="resume-info">
-            <div class="resume-section">
-              <p class="section-label">Contact</p>
-              <table class="resume-table">
-                <tr>
-                  <td>Email</td>
-                  <td>awuahkaku0@gmail.com</td>
-                </tr>
-                <tr>
-                  <td>Phone</td>
-                  <td>+233 0248529196</td>
-                </tr>
-                <tr>
-                  <td>Instagram</td>
-                  <td>darlingbigjunoir</td>
-                </tr>
-              </table>
-            </div>
-            <div class="resume-section">
-              <p class="section-label">Experience</p>
-              <table class="resume-table">
-                <tr>
-                  <td>2026 - Present</td>
-                  <td>
-                    <div class="col-main">UI/UX Developer</div>
-                    <div class="col-sub">
-                     I specialize in creating user-friendly interfaces and visually appealing websites that effectively communicate the brand's message. I am dedicated to delivering high-quality work that exceeds client expectations and provides an exceptional user experience.
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2026 - Present</td>
-                  <td>
-                    <div class="col-main">Junior Web Developer</div>
-                    <div class="col-sub">
-                      I create responsive and user-friendly websites that provide an excellent user experience and effectively communicate the brand's message.
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class="resume-section">
-              <p class="section-label">Education</p>
-              <table class="resume-table">
-                <tr>
-                  <td>2023 - 2025</td>
-                  <td>
-                    <div class="col-main">WASSCE Course: Science</div>
-                    <div class="col-sub">
-                      Our Lady Of Grace Senior High School, Kumasi, Ghana
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!------END OF RESUME SECTION------------->
-
-
-
-      <!-------SKILLS SECTION----------->
-      <section class="skills" id="skills">
-  <div class="container">
-    <div class="skills-title">
-      <h1>Skills<span>.</span></h1>
-      <p>
-        Highlighting my expertise and competencies in various web
-        development and design technologies
-      </p>
-    </div>
-    <div class="skills-container">
-      <div class="skills-info">
-
-        <div class="skill-item">
-          <div class="skill-label">
-            <h3>HTML</h3>
-            <span>90%</span>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bar" style="width: 90%"></div>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-label">
-            <h3>CSS</h3>
-            <span>80%</span>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bar" style="width: 80%"></div>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-label">
-            <h3>Photoshop</h3>
-            <span>70%</span>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bar" style="width: 70%"></div>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-label">
-            <h3>Adobe XD</h3>
-            <span>75%</span>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bar" style="width: 75%"></div>
-          </div>
-        </div>
-
-        <div class="skill-item">
-          <div class="skill-label">
-            <h3>Photography</h3>
-            <span>65%</span>
-          </div>
-          <div class="progress-container">
-            <div class="progress-bar" style="width: 65%"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-      <!-----------END OF SKILLS SECTION---------->
-
-
-
-
-
-
-
-      <!-----CONATCT SECTION-------->
-
-        <section class="contact" id="contact">
-
-        <div class="contact-title">
-            <h1>Contact <span>me.</span></h1>
-            <p>
-              Feel free to reach out to me for any inquiries, collaborations, or
-              opportunities. I'm always open to connecting with fellow
-              professionals and potential clients.
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-heading" class="hero-title">
+              Hello, I’m <span class="text-accent">Kaku Awuah</span>
+            </h1>
+            <p class="hero-lead">
+              I’m a web developer and UI/UX designer in Takoradi, Ghana. I
+              build fast, accessible sites and clean interfaces that help brands
+              communicate clearly and convert visitors into customers.
             </p>
-
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Say Hello</a>
+            </div>
+            <dl class="hero-stats">
+              <div class="hero-stat">
+                <dt class="hero-stat-value">1 Year</dt>
+                <dd class="hero-stat-label">Experience</dd>
+              </div>
+              <div class="hero-stat">
+                <dt class="hero-stat-value">10 Projects</dt>
+                <dd class="hero-stat-label">Projects</dd>
+              </div>
+              <div class="hero-stat">
+                <dt class="hero-stat-value">100%</dt>
+                <dd class="hero-stat-label">Client-focused delivery</dd>
+              </div>
+            </dl>
           </div>
-
-
-          <div class="container">
-
-
-
-          <div class="form-container">
-             
-            
-                <div class="form-info">
-                  <div class="form-details">
-                       <h1>Get In Touch</h1>
-                  <p>Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.</p>
-
-                  <p>Tel: +233 24 123 4567</p>
-                  <p>Email: kakuawuah@example.com</p>
-                  </div>
-                </div>
-
-                <div class="form-info">
-                  
-                  <form>
-                      <div class="logo" alt="Kaku">
-                <img src="Images/Logo.png" alt="Logo">
-               </div>
-               <div class="form-title">
-                <h1>Welcome Back!!</h1>
-                <p>To keep connected with me please login with your personal info</p>
-               </div>
-
-                    <div>
-                      <label for="name">Full Name:</label>
-                      <input type="text" id="name" name="name" placeholder="Name" required />
-                    </div>
-                    <div>
-                      <label for="email">Email:</label>
-                      <input type="email" id="email" name="email" placeholder="Email" required />
-                    </div>
-                    <div>
-                      <button type="submit" class="btn">Login</button>
-
-                      <p>Forgot your password? <a href="#">Reset it</a></p>
-                    </div>
-                      
-                      
-                  </form>
-
-                  <p class="account">Don't have an account? <a href="#"> <span>Sign up</span></a></p>
-                </div>
+          <div class="hero-media">
+            <figure class="hero-photo-frame">
+              <img
+                src="Images/Kaku 3.jpg"
+                alt="Kaku Awuah — web developer and designer"
+                width="520"
+                height="680"
+              />
+            </figure>
           </div>
+        </div>
+      </section>
 
-          </div>
-         
-        </section>
-      </div>
-      <!------END OF CONTACT SECTION------>
-     
-    </main>
-
-     <!-------FOOTER SECTION----------->
-      <footer class="footer" id="footer">
+      <section class="about" id="about" aria-labelledby="about-heading">
         <div class="container">
-          <div class="footer-container">
-            <div class="footer-about">
-              <h2>Kaku<span>.</span></h2>
+          <div class="about-card card-elevated">
+            <div class="about-media-col">
+              <figure class="about-photo-frame">
+                <img
+                  src="Images/Kaku 1.jpg"
+                  alt="Kaku Awuah"
+                  width="480"
+                  height="480"
+                />
+              </figure>
+              <div class="social-bar" aria-label="Social links">
+                <a
+                  href="https://github.com/darlingbigjunoir-svg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+            <div class="about-copy-col">
+              <h2 id="about-heading" class="section-title-left">
+                I am a professional web developer &amp; experience designer
+              </h2>
               <p>
-                A passionate UI/UX designer and web developer focused on
-                building clean and modern digital experiences.
+                My name is Kaku Awuah. I combine strong visual design with solid
+                front-end development so your product feels as good as it
+                looks. From layout and typography to performance and responsive
+                behavior, I care about the details that make a site trustworthy
+                and easy to use.
               </p>
-            </div>
-            <div class="footer-links">
-              <h3>Quick Links</h3>
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#resume">Resume</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-social">
-              <h3>Follow Me</h3>
-              <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <p>
+                Whether you need a portfolio, a landing page, or UI support for
+                a larger product, I focus on clear structure, fast load times, and
+                messaging that matches your brand.
+              </p>
+              <div class="about-actions">
+                <a href="#portfolio" class="btn btn-primary">My Projects</a>
+                <a
+                  href="Images/CV Kaku Awuah 17.docx"
+                  class="btn btn-outline"
+                  download
+                >
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  Download CV
+                </a>
               </div>
             </div>
           </div>
-          <div class="footer-bottom">
-            <p>© 2026 Kaku Awuah. All rights reserved.</p>
+        </div>
+      </section>
+
+      <section class="services" id="services" aria-labelledby="services-heading">
+        <div class="container">
+          <header class="section-head center">
+            <p class="eyebrow">What I do</p>
+            <h2 id="services-heading" class="section-title">Services</h2>
+            <p class="section-sub">
+              Design and development support for modern, mobile-first web
+              experiences.
+            </p>
+          </header>
+          <div class="services-grid">
+            <article class="service-card card-elevated">
+              <div class="icon-circle" aria-hidden="true">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <h3>UI / UX design</h3>
+              <p>
+                User flows, wireframes, and polished interfaces that keep
+                people oriented and engaged.
+              </p>
+            </article>
+            <article class="service-card card-elevated">
+              <div class="icon-circle" aria-hidden="true">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3>Web development</h3>
+              <p>
+                Semantic HTML, responsive CSS, and lightweight JavaScript for
+                fast, maintainable sites.
+              </p>
+            </article>
+            <article class="service-card card-elevated">
+              <div class="icon-circle" aria-hidden="true">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <h3>Brand &amp; graphics</h3>
+              <p>
+                Visual systems and assets that reinforce your story across web
+                and social touchpoints.
+              </p>
+            </article>
           </div>
         </div>
-      </footer>
-      <!--------END OF FOOTER SECTION----------->
+      </section>
 
+      <section class="process" id="process" aria-labelledby="process-heading">
+        <div class="container process-layout">
+          <div class="process-intro">
+            <h2 id="process-heading" class="section-title-left">Work process</h2>
+            <p>
+              A simple, repeatable workflow so we stay aligned from kickoff to
+              launch — and you always know what happens next.
+            </p>
+          </div>
+          <div class="process-grid">
+            <article class="process-card card-elevated">
+              <div class="icon-circle sm" aria-hidden="true">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <h3>1. Research</h3>
+              <p>Goals, audience, and competitors — so we build the right thing.</p>
+            </article>
+            <article class="process-card card-elevated">
+              <div class="icon-circle sm" aria-hidden="true">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3>2. Analyze</h3>
+              <p>Structure content and journeys before pixels or code.</p>
+            </article>
+            <article class="process-card card-elevated">
+              <div class="icon-circle sm" aria-hidden="true">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+              <h3>3. Design</h3>
+              <p>Layouts, components, and responsive behavior you can approve.</p>
+            </article>
+            <article class="process-card card-elevated">
+              <div class="icon-circle sm" aria-hidden="true">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h3>4. Launch</h3>
+              <p>Build, test, deploy, and hand off with clear documentation.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
+      <section class="portfolio" id="portfolio" aria-labelledby="portfolio-heading">
+        <div class="container">
+          <header class="section-head center">
+            <p class="eyebrow">Selected work</p>
+            <h2 id="portfolio-heading" class="section-title">Portfolio</h2>
+            <p class="section-sub">
+              Live projects from my GitHub —
+              <a
+                href="https://github.com/darlingbigjunoir-svg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >darlingbigjunoir-svg</a
+              >. “Live” opens GitHub Pages when the repo has publishing enabled.
+            </p>
+          </header>
+          <div class="portfolio-grid">
+            <article class="portfolio-card card-elevated">
+              <div class="portfolio-card-visual" aria-hidden="true">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="portfolio-card-body">
+                <span class="portfolio-lang">HTML</span>
+                <h3>Construction Pro</h3>
+                <p>
+                  Multi-page construction industry site — layout, sections, and
+                  responsive structure.
+                </p>
+                <div class="portfolio-card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://darlingbigjunoir-svg.github.io/Construction---Pro/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="portfolio-card card-elevated">
+              <div class="portfolio-card-visual" aria-hidden="true">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="portfolio-card-body">
+                <span class="portfolio-lang">HTML</span>
+                <h3>Combo Hotel Pro</h3>
+                <p>
+                  Hotel / hospitality style front-end with bookings-style
+                  sections and imagery.
+                </p>
+                <div class="portfolio-card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://darlingbigjunoir-svg.github.io/ComboHotel-Pro/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="portfolio-card card-elevated">
+              <div class="portfolio-card-visual" aria-hidden="true">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="portfolio-card-body">
+                <span class="portfolio-lang">HTML</span>
+                <h3>Broso Project</h3>
+                <p>Front-end build focused on structure, content blocks, and polish.</p>
+                <div class="portfolio-card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://darlingbigjunoir-svg.github.io/Broso-Project/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="portfolio-card card-elevated">
+              <div class="portfolio-card-visual" aria-hidden="true">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="portfolio-card-body">
+                <span class="portfolio-lang">CSS</span>
+                <h3>Flare Project</h3>
+                <p>Visual design and styling practice — layout and component detail.</p>
+                <div class="portfolio-card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://darlingbigjunoir-svg.github.io/Flare-Project/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="portfolio-card card-elevated">
+              <div class="portfolio-card-visual" aria-hidden="true">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="portfolio-card-body">
+                <span class="portfolio-lang">HTML</span>
+                <h3>Downtime Project</h3>
+                <p>Compact HTML project — quick layout and section experiments.</p>
+                <div class="portfolio-card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://darlingbigjunoir-svg.github.io/Downtime-Project/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="portfolio-card card-elevated">
+              <div class="portfolio-card-visual" aria-hidden="true">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="portfolio-card-body">
+                <span class="portfolio-lang">HTML</span>
+                <h3>Portfolio (GitHub)</h3>
+                <p>
+                  Earlier portfolio deployment on GitHub Pages — same profile,
+                  different iteration.
+                </p>
+                <div class="portfolio-card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://darlingbigjunoir-svg.github.io/portfolio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="portfolio-card card-elevated">
+              <div class="portfolio-card-visual" aria-hidden="true">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="portfolio-card-body">
+                <span class="portfolio-lang">CSS</span>
+                <h3>Card UI</h3>
+                <p>Card component styling — spacing, shadows, and responsive behavior.</p>
+                <div class="portfolio-card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://darlingbigjunoir-svg.github.io/Card/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="portfolio-card card-elevated">
+              <div class="portfolio-card-visual" aria-hidden="true">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="portfolio-card-body">
+                <span class="portfolio-lang">CSS</span>
+                <h3>Form UI</h3>
+                <p>Form layout and field styling for cleaner data-collection UIs.</p>
+                <div class="portfolio-card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://darlingbigjunoir-svg.github.io/Form/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
+      <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <div class="container contact-layout">
+          <div class="contact-copy">
+            <h2 id="contact-heading" class="section-title-left">Let’s work together</h2>
+            <p>
+              Tell me about your project, timeline, and budget. I’ll reply as
+              soon as I can.
+            </p>
+            <ul class="contact-details">
+              <li>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:awuahkaku0@gmail.com">awuahkaku0@gmail.com</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <a href="tel:+233248529196">+233 024 852 9196</a>
+              </li>
+              <li>
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span>darlingbigjunoir</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <a
+                  href="https://github.com/darlingbigjunoir-svg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/darlingbigjunoir-svg</a
+                >
+              </li>
+            </ul>
+          </div>
+          <form class="contact-form card-elevated" action="#" method="post">
+            <div class="form-row">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-row">
+              <label for="contact-email">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send message</button>
+            <p class="form-note">
+              
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
 
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="brand footer-brand-link">
+            <span class="brand-mark sm" aria-hidden="true">K</span>
+            <span class="brand-text">Kaku</span>
+          </a>
+          <p>
+            Web developer and UI/UX designer building clear, modern experiences
+            on the web.
+          </p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Quick links</h3>
+          <ul class="footer-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Follow</h3>
+          <div class="social-icons">
+            <a
+              href="https://github.com/darlingbigjunoir-svg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Kaku Awuah. All rights reserved.</p>
+      </div>
+    </footer>
 
-
-      
-     <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const nav = document.querySelector('nav');
-
-  menuToggle.addEventListener('click', function () {
-    nav.classList.toggle('active');
-  });
-</script>
-      
-    
-  
+    <script src="js/script.js" ></script>
   </body>
 </html>
