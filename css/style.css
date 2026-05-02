@@ -99,6 +99,12 @@ button {
   transform: translateY(-1px);
 }
 
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .btn-outline {
   background: #fff;
   color: var(--accent);
@@ -242,6 +248,14 @@ button {
 
 .site-nav a:hover::after,
 .site-nav a:focus-visible::after {
+  width: 100%;
+}
+
+.site-nav a.is-active {
+  color: var(--accent);
+}
+
+.site-nav a.is-active::after {
   width: 100%;
 }
 
