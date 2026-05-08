@@ -1,0 +1,3 @@
+# Never upload these to GitHub — they contain your passwords!
+.env
+node_modules/
