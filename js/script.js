@@ -130,47 +130,83 @@
     });
   }
 
+  // ============================================================
+  //  UPDATED setupForm — now sends data to your real backend!
+  // ============================================================
   function setupForm() {
     if (!contactForm) return;
 
-    var nameInput = contactForm.querySelector("#contact-name");
-    var emailInput = contactForm.querySelector("#contact-email");
+    var nameInput    = contactForm.querySelector("#contact-name");
+    var emailInput   = contactForm.querySelector("#contact-email");
     var messageInput = contactForm.querySelector("#contact-message");
-    var submitBtn = contactForm.querySelector("button[type='submit']");
+    var submitBtn    = contactForm.querySelector("button[type='submit']");
+    var note         = contactForm.querySelector(".form-note");
 
     function showMessage(text, isError) {
-      var note = contactForm.querySelector(".form-note");
       if (!note) return;
       note.textContent = text;
       note.style.color = isError ? "#dc2626" : "#16a34a";
     }
 
     contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+      event.preventDefault(); // stop the page from reloading
 
-      var nameVal = nameInput ? nameInput.value.trim() : "";
-      var emailVal = emailInput ? emailInput.value.trim() : "";
+      var nameVal    = nameInput    ? nameInput.value.trim()    : "";
+      var emailVal   = emailInput   ? emailInput.value.trim()   : "";
       var messageVal = messageInput ? messageInput.value.trim() : "";
-      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
+      var emailOk    = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
 
+      // Validate on the frontend first (quick check before hitting the server)
       if (!nameVal || !emailVal || !messageVal || !emailOk) {
         showMessage("Please fill all fields with a valid email address.", true);
         return;
       }
 
+      // Disable the button and show loading text so they don't click twice
       if (submitBtn) {
-        submitBtn.disabled = true;
+        submitBtn.disabled    = true;
         submitBtn.textContent = "Sending...";
       }
+      showMessage("", false); // clear any old message
 
-      window.setTimeout(function () {
-        contactForm.reset();
-        showMessage("Thank you. Your message has been captured successfully.", false);
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Send message";
-        }
-      }, 650);
+      // Send the data to our backend server using fetch()
+      // fetch() is a built-in browser tool for talking to a server
+      fetch("/send-email", {
+        method:  "POST",                              // POST = sending data
+        headers: { "Content-Type": "application/json" }, // tell server we're sending JSON
+        body: JSON.stringify({                        // convert data to JSON text
+          name:    nameVal,
+          email:   emailVal,
+          message: messageVal,
+        }),
+      })
+        .then(function (response) {
+          // .then() runs when the server replies
+          return response.json(); // read the reply as JSON
+        })
+        .then(function (data) {
+          // data is what the server sent back
+          if (data.success) {
+            // It worked! 🎉
+            showMessage(data.message, false);
+            contactForm.reset(); // clear the form fields
+          } else {
+            // Server replied but said something went wrong
+            showMessage(data.message || "Something went wrong. Please try again.", true);
+          }
+        })
+        .catch(function (error) {
+          // .catch() runs if the server is unreachable (e.g. server not running)
+          console.error("Network error:", error);
+          showMessage("Could not reach the server. Make sure it is running.", true);
+        })
+        .finally(function () {
+          // .finally() always runs — re-enable the button either way
+          if (submitBtn) {
+            submitBtn.disabled    = false;
+            submitBtn.textContent = "Send message";
+          }
+        });
     });
   }
 
