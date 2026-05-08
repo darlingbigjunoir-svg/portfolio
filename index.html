@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,9 +34,10 @@
           id="menu-toggle"
           aria-expanded="false"
           aria-controls="site-nav"
+          aria-label="Toggle menu"
         >
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
-        </>
+        </button>
         <nav class="site-nav" id="site-nav" aria-label="Primary">
           <ul>
             <li><a href="#top">Home</a></li>
@@ -59,8 +60,8 @@
               Hello, I’m <span class="text-accent">Kaku Awuah</span>
             </h1>
             <p class="hero-lead">
-              I’m a web developer and UI/UX designer in Takoradi, Ghana. I
-              build fast, accessible sites and clean interfaces that help brands
+              I’m a web developer and UI/UX designer in Takoradi, Ghana. I build
+              fast, accessible sites and clean interfaces that help brands
               communicate clearly and convert visitors into customers.
             </p>
             <div class="hero-actions">
@@ -114,7 +115,7 @@
                   aria-label="GitHub"
                   ><i class="fa-brands fa-github"></i
                 ></a>
-                
+
                 <a
                   href="https://www.instagram.com/"
                   target="_blank"
@@ -144,15 +145,15 @@
               </h2>
               <p>
                 My name is Kaku Awuah. I combine strong visual design with solid
-                front-end development so your product feels as good as it
-                looks. From layout and typography to performance and responsive
+                front-end development so your product feels as good as it looks.
+                From layout and typography to performance and responsive
                 behavior, I care about the details that make a site trustworthy
                 and easy to use.
               </p>
               <p>
                 Whether you need a portfolio, a landing page, or UI support for
-                a larger product, I focus on clear structure, fast load times, and
-                messaging that matches your brand.
+                a larger product, I focus on clear structure, fast load times,
+                and messaging that matches your brand.
               </p>
               <div class="about-actions">
                 <a href="#portfolio" class="btn btn-primary">My Projects</a>
@@ -170,7 +171,11 @@
         </div>
       </section>
 
-      <section class="services" id="services" aria-labelledby="services-heading">
+      <section
+        class="services"
+        id="services"
+        aria-labelledby="services-heading"
+      >
         <div class="container">
           <header class="section-head center">
             <p class="eyebrow">What I do</p>
@@ -187,8 +192,8 @@
               </div>
               <h3>UI / UX design</h3>
               <p>
-                User flows, wireframes, and polished interfaces that keep
-                people oriented and engaged.
+                User flows, wireframes, and polished interfaces that keep people
+                oriented and engaged.
               </p>
             </article>
             <article class="service-card card-elevated">
@@ -218,7 +223,9 @@
       <section class="process" id="process" aria-labelledby="process-heading">
         <div class="container process-layout">
           <div class="process-intro">
-            <h2 id="process-heading" class="section-title-left">Work process</h2>
+            <h2 id="process-heading" class="section-title-left">
+              Work process
+            </h2>
             <p>
               A simple, repeatable workflow so we stay aligned from kickoff to
               launch — and you always know what happens next.
@@ -230,7 +237,9 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
               <h3>1. Research</h3>
-              <p>Goals, audience, and competitors — so we build the right thing.</p>
+              <p>
+                Goals, audience, and competitors — so we build the right thing.
+              </p>
             </article>
             <article class="process-card card-elevated">
               <div class="icon-circle sm" aria-hidden="true">
@@ -244,7 +253,9 @@
                 <i class="fa-solid fa-pen-ruler"></i>
               </div>
               <h3>3. Design</h3>
-              <p>Layouts, components, and responsive behavior you can approve.</p>
+              <p>
+                Layouts, components, and responsive behavior you can approve.
+              </p>
             </article>
             <article class="process-card card-elevated">
               <div class="icon-circle sm" aria-hidden="true">
@@ -257,7 +268,11 @@
         </div>
       </section>
 
-      <section class="portfolio" id="portfolio" aria-labelledby="portfolio-heading">
+      <section
+        class="portfolio"
+        id="portfolio"
+        aria-labelledby="portfolio-heading"
+      >
         <div class="container">
           <header class="section-head center">
             <p class="eyebrow">Selected work</p>
@@ -324,7 +339,10 @@
               <div class="portfolio-card-body">
                 <span class="portfolio-lang">HTML</span>
                 <h3>Broso Project</h3>
-                <p>Front-end build focused on structure, content blocks, and polish.</p>
+                <p>
+                  Front-end build focused on structure, content blocks, and
+                  polish.
+                </p>
                 <div class="portfolio-card-actions">
                   <a
                     class="btn btn-primary btn-sm"
@@ -343,7 +361,10 @@
               <div class="portfolio-card-body">
                 <span class="portfolio-lang">CSS</span>
                 <h3>Flare Project</h3>
-                <p>Visual design and styling practice — layout and component detail.</p>
+                <p>
+                  Visual design and styling practice — layout and component
+                  detail.
+                </p>
                 <div class="portfolio-card-actions">
                   <a
                     class="btn btn-primary btn-sm"
@@ -362,7 +383,9 @@
               <div class="portfolio-card-body">
                 <span class="portfolio-lang">HTML</span>
                 <h3>Downtime Project</h3>
-                <p>Compact HTML project — quick layout and section experiments.</p>
+                <p>
+                  Compact HTML project — quick layout and section experiments.
+                </p>
                 <div class="portfolio-card-actions">
                   <a
                     class="btn btn-primary btn-sm"
@@ -381,7 +404,9 @@
       <section class="contact" id="contact" aria-labelledby="contact-heading">
         <div class="container contact-layout">
           <div class="contact-copy">
-            <h2 id="contact-heading" class="section-title-left">Let’s work together</h2>
+            <h2 id="contact-heading" class="section-title-left">
+              Let’s work together
+            </h2>
             <p>
               Tell me about your project, timeline, and budget. I’ll reply as
               soon as I can.
@@ -413,7 +438,13 @@
           <form class="contact-form card-elevated" action="#" method="post">
             <div class="form-row">
               <label for="contact-name">Name</label>
-              <input id="contact-name" name="name" type="text" autocomplete="name" required />
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
             </div>
             <div class="form-row">
               <label for="contact-email">Email</label>
@@ -434,10 +465,10 @@
                 required
               ></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Send message</button>
-            <p class="form-note">
-              I'll get back to you as soon as possible.
-            </p>
+            <button type="submit" class="btn btn-primary btn-block">
+              Send message
+            </button>
+            <p class="form-note">I'll get back to you as soon as possible.</p>
           </form>
         </div>
       </section>
@@ -481,12 +512,12 @@
               aria-label="Instagram"
               ><i class="fa-brands fa-instagram"></i
             ></a>
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                ><i class="fa-brands fa-linkedin-in"></i
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
             ></a>
             <a
               href="https://twitter.com/"
@@ -503,6 +534,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js" ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
