@@ -1,17 +1,5 @@
 
-/* ── Shared tokens (extend or override your existing variables) ── */
-:root {
-  --accent:        #6cffb3;
-  --accent-dim:    rgba(108, 255, 179, 0.10);
-  --accent-glow:   rgba(108, 255, 179, 0.22);
-  --border:        rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(108, 255, 179, 0.28);
-  --text-primary:  #f0f0f5;
-  --text-muted:    #7a7a8c;
-  --bg-card:       #13131a;
-  --radius:        14px;
-  --transition:    0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 /* ── Reusable section labels ── */
 .section-label {
