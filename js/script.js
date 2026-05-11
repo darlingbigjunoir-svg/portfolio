@@ -221,3 +221,102 @@
 
   init();
 })();
+
+
+(function () {
+  'use strict';
+
+  const track  = document.getElementById('testimonialsTrack');
+  const dots   = document.querySelectorAll('.dot');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  if (!track || !dots.length) return;
+
+  const total = dots.length;
+  let current = 0;
+  let autoTimer = null;
+
+  /* ── Core: move to slide ── */
+  function goTo(index) {
+    // Clamp with wrap-around
+    current = (index + total) % total;
+
+    // Slide the track
+    track.style.transform = `translateX(-${current * 100}%)`;
+
+    // Update dots
+    dots.forEach((dot, i) => {
+      const active = i === current;
+      dot.classList.toggle('dot--active', active);
+      dot.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  }
+
+  /* ── Auto-advance every 5 s ── */
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  function stopAuto() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  /* ── Dot clicks ── */
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      goTo(Number(dot.dataset.index));
+      stopAuto();
+      startAuto(); // restart timer after manual interaction
+    });
+  });
+
+  /* ── Arrow clicks ── */
+  prevBtn.addEventListener('click', () => {
+    goTo(current - 1);
+    stopAuto();
+    startAuto();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    goTo(current + 1);
+    stopAuto();
+    startAuto();
+  });
+
+  /* ── Keyboard support (left / right arrows) ── */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  { goTo(current - 1); stopAuto(); startAuto(); }
+    if (e.key === 'ArrowRight') { goTo(current + 1); stopAuto(); startAuto(); }
+  });
+
+  /* ── Touch / swipe support ── */
+  let touchStartX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    const delta = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(delta) < 40) return; // ignore tiny swipes
+    goTo(delta < 0 ? current + 1 : current - 1);
+    stopAuto();
+    startAuto();
+  }, { passive: true });
+
+  /* ── Pause auto-play when tab is hidden ── */
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopAuto();
+    else startAuto();
+  });
+
+  /* ── Init ── */
+  goTo(0);
+  startAuto();
+
+})();
