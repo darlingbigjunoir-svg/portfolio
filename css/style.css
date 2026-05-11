@@ -814,7 +814,7 @@ button {
   color: #9ca3af;
 }
 
-/* —— Reveal on scroll —— */
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -826,44 +826,17 @@ button {
   transform: none;
 }
 
-/* ============================================================
-   testimonials.css — Kaku Awuah Portfolio
-   Testimonials section styles (external)
-   ============================================================ */
 
-/* ── CSS Variables ── */
-:root {
-  --bg:          #0a0a0f;
-  --bg-card:     #13131a;
-  --bg-card-hover: #1a1a25;
-  --accent:      #6cffb3;
-  --accent-dim:  rgba(108, 255, 179, 0.12);
-  --accent-glow: rgba(108, 255, 179, 0.25);
-  --text-primary: #f0f0f5;
-  --text-muted:   #7a7a8c;
-  --border:      rgba(255, 255, 255, 0.07);
-  --border-accent: rgba(108, 255, 179, 0.3);
-  --font-display: 'Syne', sans-serif;
-  --font-body:    'DM Sans', sans-serif;
-  --radius:       16px;
-  --transition:   0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-/* ── Reset ── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: var(--font-body);
+  
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Section ── */
 .testimonials {
   position: relative;
   padding: 100px 24px 80px;
