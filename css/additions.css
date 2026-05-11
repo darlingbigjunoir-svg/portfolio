@@ -1,0 +1,329 @@
+/* ============================================================
+   pro-additions.css — Kaku Awuah Portfolio
+   Skills, FAQ, Availability Badge, Back-to-top, Scroll reveal
+   ============================================================ */
+
+/* ── Shared tokens (extend or override your existing variables) ── */
+:root {
+  --accent:        #6cffb3;
+  --accent-dim:    rgba(108, 255, 179, 0.10);
+  --accent-glow:   rgba(108, 255, 179, 0.22);
+  --border:        rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(108, 255, 179, 0.28);
+  --text-primary:  #f0f0f5;
+  --text-muted:    #7a7a8c;
+  --bg-card:       #13131a;
+  --radius:        14px;
+  --transition:    0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reusable section labels ── */
+.section-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--border-accent);
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+
+/* ============================================================
+   1. AVAILABILITY BADGE
+   ============================================================ */
+.avail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--accent-dim);
+  border: 1px solid var(--border-accent);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
+.avail-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  50%       { box-shadow: 0 0 0 6px transparent; }
+}
+
+/* ============================================================
+   2. SKILLS SECTION
+   ============================================================ */
+.skills {
+  padding: 80px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills__inner {}
+
+.skills__header {
+  text-align: center;
+}
+
+.skills__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 44px;
+}
+
+/* Individual skill bar */
+.skill-bar {}
+
+.skill-bar__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.skill-bar__name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-bar__pct {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.skill-bar__track {
+  height: 6px;
+  background: var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.skill-bar__fill {
+  height: 100%;
+  width: 0%;                       /* animated to data-level by JS */
+  background: linear-gradient(90deg, var(--accent) 0%, #38d9a9 100%);
+  border-radius: 100px;
+  transition: width 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tool chips */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tool-chip {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 100px;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+  cursor: default;
+}
+
+.tool-chip:hover {
+  color: var(--accent);
+  border-color: var(--border-accent);
+  background: var(--accent-dim);
+}
+
+/* ============================================================
+   3. FAQ SECTION
+   ============================================================ */
+.faq {
+  padding: 80px 24px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.faq__header {
+  text-align: center;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Each item */
+.faq__item {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  transition: background var(--transition);
+}
+
+.faq__item:last-child {
+  border-bottom: none;
+}
+
+.faq__item[open] {
+  background: #16161f;
+}
+
+/* Summary row */
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: color var(--transition);
+}
+
+.faq__question::-webkit-details-marker { display: none; }
+
+.faq__item[open] .faq__question {
+  color: var(--accent);
+}
+
+.faq__icon {
+  font-size: 1.2rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+  line-height: 1;
+}
+
+.faq__item[open] .faq__icon {
+  transform: rotate(45deg);
+}
+
+/* Answer */
+.faq__answer {
+  padding: 0 28px 22px;
+  animation: faq-open 0.28s ease;
+}
+
+@keyframes faq-open {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.faq__answer p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* ============================================================
+   4. BACK TO TOP BUTTON
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 28px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--border-accent);
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition), background var(--transition);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background: var(--accent);
+  color: #0a0a0f;
+}
+
+/* ============================================================
+   5. SCROLL REVEAL
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay helpers */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 600px) {
+  .skills,
+  .faq {
+    padding: 56px 16px;
+  }
+
+  .faq__question {
+    padding: 18px 20px;
+    font-size: 0.88rem;
+  }
+
+  .faq__answer {
+    padding: 0 20px 18px;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 16px;
+  }
+}
