@@ -164,6 +164,7 @@ button {
   top: 0;
   z-index: 1000;
   background: rgba(243, 244, 248, 0.92);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(15, 23, 42, 0.06);
   transition: box-shadow 0.2s;
@@ -945,6 +946,7 @@ body {
   top: 32px;
   left: 36px;
   pointer-events: none;
+  -webkit-user-select: none;
   user-select: none;
 }
 
